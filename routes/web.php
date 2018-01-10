@@ -24,3 +24,4 @@ $router->post('/registrarproyecto', ['uses'=>'ProjectController@RegistrarProyect
 $router->get('/proyectos/{id}', ['uses'=>'ProjectController@verproyectos']);
 $router->get('/proyectos/miembros/{id}', ['uses'=>'ProjectController@verEncargados']);
 $router->get('/proyectos/objetivos/{id}', ['uses'=>'ProjectController@verObjetivos']);
+$router->get('proyectos/objetivos/tareas/{id}', ['uses'=>'ProjectController@verTareas']);

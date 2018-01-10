@@ -98,6 +98,12 @@ class ProjectController extends Controller
         $objetivos=Objective::where('project_id', $id)->get();
         return response()->json($objetivos);
     }
+
+    function verTareas($id)
+    {
+        $tareas=Task::where('obj_id', $id)->get();
+        return response()->json($tareas);
+    }
    
 
 }
