@@ -20,3 +20,7 @@ $router->post('/member/login', ['uses'=>'MemberController@getToken']);
 $router->get('/usuarios', ['uses'=>'MemberController@usuarios']);
 $router->get('members/{username}', ['uses'=>'MemberController@users']);
 $router->get('h/{pass}', ['uses'=>'MemberController@hash']);
+$router->post('/registrarproyecto', ['uses'=>'ProjectController@RegistrarProyecto']);
+$router->get('/proyectos/{id}', ['uses'=>'ProjectController@verproyectos']);
+$router->get('/proyectos/miembros/{id}', ['uses'=>'ProjectController@verEncargados']);
+$router->get('/proyectos/objetivos/{id}', ['uses'=>'ProjectController@verObjetivos']);

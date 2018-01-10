@@ -37,7 +37,7 @@ class MemberController extends Controller
                 'username' => $request['username'],
                 'password'=> Hash::make($request['password']),
                 'api_token' => str_random(60),
-                'remember_token' => str_random(60)
+                'remember_token' => str_random(60),
             ]); 
 
             return response()->json($member, 201);   
@@ -88,7 +88,7 @@ class MemberController extends Controller
 
     function hash($h)
     {
-        return Hash::check($h);
+        return Hash::make($h);
     }
 
     function users($username)
