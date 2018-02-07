@@ -25,3 +25,7 @@ $router->get('/proyectos/{id}', ['uses'=>'ProjectController@verproyectos']);
 $router->get('/proyectos/miembros/{id}', ['uses'=>'ProjectController@verEncargados']);
 $router->get('/proyectos/objetivos/{id}', ['uses'=>'ProjectController@verObjetivos']);
 $router->get('proyectos/objetivos/tareas/{id}', ['uses'=>'ProjectController@verTareas']);
+$router->get('proyectos/porcentaje/{id}', ['uses'=>'ProjectController@calcularPorcentaje']);
+$router->post('proyectos/objetivos/tareas/completar', ['uses'=>'ProjectController@completarTarea']);
+$router->get('proyecto/{id}', ['uses'=>'ProjectController@infoProyecto']);
+$router->post('proyecto/chats',['uses'=>'ProjectController@GuardarMensaje']);
