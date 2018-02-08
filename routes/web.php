@@ -29,3 +29,4 @@ $router->get('proyectos/porcentaje/{id}', ['uses'=>'ProjectController@calcularPo
 $router->post('proyectos/objetivos/tareas/completar', ['uses'=>'ProjectController@completarTarea']);
 $router->get('proyecto/{id}', ['uses'=>'ProjectController@infoProyecto']);
 $router->post('proyecto/chats',['uses'=>'ProjectController@GuardarMensaje']);
+$router->get('proyecto/chats/mensaje/{id}',['uses'=>'ProjectController@VerMensajes']);

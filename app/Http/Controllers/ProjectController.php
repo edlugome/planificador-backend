@@ -85,12 +85,13 @@ class ProjectController extends Controller
 
     function GuardarMensaje(Request $request)
     {
-        Message::create([
-            'message' =>$request['message'],
-            'chat' =>$request['chat_id']
+        $mensaje=Message::create([
+            'text' =>$request['text'],
+            'chat' =>$request['chat_id'],
+            'from' =>$request['from']
         ]);
 
-        return response()->json('ok',201);
+        return response()->json($mensaje,201);
     }
 
     function verproyectos($id)
@@ -189,6 +190,12 @@ class ProjectController extends Controller
     {
         $proyecto=Project::where('id',$id)->first();
         return response()->json($proyecto);
+    }
+
+    function VerMensajes($id)
+    {
+        $mensaje=Message::where('chat',$id)->get();
+        return response()->json($mensaje);
     }
 
 

@@ -18,7 +18,7 @@ class Message extends Model implements AuthenticatableContract, AuthorizableCont
      * @var array
      */
     protected $fillable = [
-        'id', 'message', 'chat'
+        'id', 'text', 'chat', 'from'
     ];
 
     /**
